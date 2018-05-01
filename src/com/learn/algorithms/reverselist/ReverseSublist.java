@@ -54,6 +54,7 @@ public class ReverseSublist {
 		while (currentNode != null) {
 			nextNode = currentNode.next;
 			currentNode.next = previousNode;
+			System.err.println(previousNode ==null? "null": previousNode.data);
 			previousNode = currentNode;
 			currentNode = nextNode;
 		}
