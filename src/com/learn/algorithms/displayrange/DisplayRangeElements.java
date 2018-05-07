@@ -22,8 +22,8 @@ public class DisplayRangeElements {
 	      startingRange=input.nextInt();
 	      System.out.println("Please Enter a ending Range");
 	      endingRange=input.nextInt();
-          //PrintRangeIterative(startingRange,endingRange);
-          PrintRangeRecursive(startingRange,endingRange);
+          PrintRangeIterative(startingRange,endingRange);
+         // PrintRangeRecursive(startingRange,endingRange);
 	}
 
 	private static void PrintRangeRecursive(int startingRange, int endingRange) {
@@ -39,8 +39,19 @@ public class DisplayRangeElements {
 		if(startingRange>endingRange){
 			System.err.println("SatrtingRange shouldnt be greater than endingRange ");
 		}
-		for(int i=startingRange;i<=endingRange;i++){
+		/*for(int i=startingRange;i<=endingRange;i++){
 			System.out.println(i);
+		}*/
+		
+		while(endingRange!=0){
+			
+			int carry =(startingRange&endingRange);
+			System.out.println("carry"+carry);
+			startingRange= startingRange ^endingRange;
+			System.out.println("startingRange"+startingRange);
+			endingRange=carry<<1;
+			System.out.println("endingRange"+endingRange);
+			
 		}
 		
 	}
