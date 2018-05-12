@@ -21,13 +21,13 @@ public class DoorStateAlgorithm {
 		int n = 100;
 		for (int i=0; i < doorStatuses.length; i++) {
 			List<Integer> factors = getFactors(i+1);
-			int count = 0;
+			/*int count = 0;
 			for (int factor : factors) {
 				if (factor <= n) {
 					count++;
 				}
-			}
-			if (count%2 == 1) {
+			}*/
+			if (factors.size()%2 == 1) {
 				doorStatuses[i] = true;
 			}
 			System.out.println(String.format("door[%s] is %s", i+1, doorStatuses[i] ? "open" : "closed"));
