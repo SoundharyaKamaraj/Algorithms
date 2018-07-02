@@ -15,9 +15,9 @@ public class AnagramExample {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		//System.out.println(isAnagramWord("army","mary"));
+		System.out.println(isAnagramWord("army","mary"));
 		System.out.println(checkAnagram("stop","tops"));
-		System.out.println(checkAnagram("stoep","tops"));
+		//System.out.println(checkAnagram("stoep","tops"));
 
 	}
 
